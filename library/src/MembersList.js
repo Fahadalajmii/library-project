@@ -1,12 +1,29 @@
 import React, { useState } from "react";
-import members from "./components/Members";
+import AddMemberModal from "./components/modals/AddMemberModal";
+
 import MemberForm from "./MemberForm";
+import { observer } from "mobx-react";
+import memberStore from "./stores/memberStore";
+import { Button } from "react-bootstrap";
+
 const MembersList = () => {
-  const [displayMembers, setDisplayMembers] = useState(members);
+  const [show, setShow] = useState(false);
+  let membersArray = memberStore.members.map((member) => (
+    <MemberForm member={member} />
+  ));
 
-  let membersArray = members.map((member) => <MemberForm member={member} />);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-  return <div className="container">{membersArray}</div>;
+  return (
+    <div>
+      {membersArray}
+      <Button variant="primary" onClick={handleShow}>
+        Add new member
+      </Button>
+      <AddMemberModal show={show} handleClose={handleClose} />
+    </div>
+  );
 };
 
-export default MembersList;
+export default observer(MembersList);

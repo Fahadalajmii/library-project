@@ -1,22 +1,17 @@
 import "./App.css";
 import MembersList from "./MembersList";
-import AddMemberModal from "./components/modals/AddMemberModal";
-import { useState } from "react";
-import { Button } from "react-bootstrap";
+import BookList from "./BookList";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home";
 
 function App() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <div>
-      <MembersList />
-      <Button variant="primary" onClick={handleShow}>
-        Add new member
-      </Button>
-      <AddMemberModal show={show} handleClose={handleClose} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/memberslist" element={<MembersList />} />
+        <Route path="/bookslist" element={<BookList />} />
+      </Routes>
     </div>
   );
 }
