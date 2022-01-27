@@ -3,7 +3,7 @@
 ```
 - routes path
 - select menu (geners)
-- css (coolers)
+- css `(coolers)`
 - details (fix bug)
 - navbar
 - minimum names
