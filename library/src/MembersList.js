@@ -6,7 +6,7 @@ const MembersList = () => {
 
   let membersArray = members.map((member) => <MemberForm member={member} />);
 
-  return <div>{membersArray}</div>;
+  return <div className="container">{membersArray}</div>;
 };
 
 export default MembersList;
