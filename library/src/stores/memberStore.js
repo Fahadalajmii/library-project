@@ -1,5 +1,5 @@
 import { action, makeAutoObservable } from "mobx";
-import data from "../components/Members";
+import data from "../Data/Members";
 
 class MemberStore {
   members = data;

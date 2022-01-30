@@ -1,5 +1,5 @@
 import { action, makeAutoObservable } from "mobx";
-import data from "../components/Books";
+import data from "../Data/Books";
 
 class BookStore {
   books = data;
