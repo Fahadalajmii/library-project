@@ -5,7 +5,7 @@ const DetailsModal = ({ show, handleClose, book }) => {
   return (
     <div>
       {/* <!-- Vertically centered modal --> */}
-      <div class="modal-dialog modal-dialog-centered">
+      <div className="modal-dialog modal-dialog-centered">
         <>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>

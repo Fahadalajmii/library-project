@@ -9,7 +9,7 @@ import { Button } from "react-bootstrap";
 const MembersList = () => {
   const [show, setShow] = useState(false);
   let membersArray = memberStore.members.map((member) => (
-    <MemberCard member={member} />
+    <MemberCard member={member} key={member.id} />
   ));
 
   const handleClose = () => setShow(false);
