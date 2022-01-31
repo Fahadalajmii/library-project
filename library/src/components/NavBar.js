@@ -15,7 +15,8 @@ const NavBar = () => {
         </Container>
         <Container>
           <blockquote className="quote">
-            a library opens a window into the soul and a door into the world
+            a library that opens a window into the soul and a door into the
+            world
           </blockquote>
         </Container>
       </Navbar>

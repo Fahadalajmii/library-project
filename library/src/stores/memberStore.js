@@ -15,6 +15,17 @@ class MemberStore {
       member.firstName.toLowerCase() + "-" + member.lastName.toLowerCase();
     this.members.push(member);
   };
+
+  updateMember = (bookId, memberId) => {
+    this.members = this.members.map((member) =>
+      member.id === memberId
+        ? {
+            ...member,
+            currentlyBorrowedBooks: [...member.currentlyBorrowedBooks, bookId],
+          }
+        : member
+    );
+  };
 }
 
 const memberStore = new MemberStore();

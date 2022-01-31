@@ -2,7 +2,11 @@ import React from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import memberStore from "../../stores/memberStore";
 
-const BorrowModal = ({ show, handleClose }) => {
+const BorrowModal = ({ show, handleClose, setMemberId }) => {
+  const handleChange = (event) => {
+    setMemberId(event.target.value);
+  };
+
   return (
     <div>
       <Modal show={show} onHide={handleClose}>
@@ -12,9 +16,9 @@ const BorrowModal = ({ show, handleClose }) => {
         <Modal.Body>
           <Form.Group className="mb-3">
             <Form.Label>Member name</Form.Label>
-            <Form.Select>
+            <Form.Select onChange={handleChange}>
               {memberStore.members.map((member) => (
-                <option>
+                <option value={member.id}>
                   {member.firstName} {member.lastName}
                 </option>
               ))}

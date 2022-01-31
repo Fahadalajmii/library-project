@@ -1,5 +1,6 @@
 import { action, makeAutoObservable } from "mobx";
 import data from "../Data/Books";
+import members from "../Data/Members";
 
 class BookStore {
   books = data;
@@ -20,6 +21,15 @@ class BookStore {
       updatedBook.id === bookId
         ? { ...updatedBook, available: !updatedBook.available }
         : updatedBook
+    );
+  };
+
+  updateBorrow = (memberID, BookId) => {
+    console.log("==================", memberID);
+    this.books = this.books.map((book) =>
+      book.id === BookId
+        ? { ...book, borrowedBy: [...book.borrowedBy, memberID] }
+        : book
     );
   };
 }
