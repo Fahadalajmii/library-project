@@ -7,6 +7,8 @@ const books = [
     genre: ["Self-Help"],
     available: false,
     borrowedBy: [3],
+    image:
+      "https://images-na.ssl-images-amazon.com/images/I/41kspFBwVxL._SX331_BO1,204,203,200_.jpg",
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ const books = [
     genre: ["Sci-Fi", "Thriller"],
     available: false,
     borrowedBy: [3],
+    image:
+      "https://rukminim1.flixcart.com/image/416/416/ki4w0i80-0/book/q/b/n/dark-matter-original-imafxzubmczqshju.jpeg?q=70",
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ const books = [
     genre: ["Suspense", "Fantasy"],
     available: false,
     borrowedBy: [1, 3, 5, 1],
+    image:
+      "https://kbimages1-a.akamaihd.net/3ac6046a-4dc0-4123-b7f2-4823935e7ea8/353/569/90/False/mr-penumbra-s-24-hour-bookstore-2.jpg",
   },
   {
     id: 4,
@@ -34,6 +40,7 @@ const books = [
     genre: ["Biography"],
     available: true,
     borrowedBy: [2, 5],
+    image: "https://images-na.ssl-images-amazon.com/images/I/717KRq4xxxL.jpg",
   },
   {
     id: 5,
@@ -43,6 +50,7 @@ const books = [
     genre: ["Business", "Entrepreneurship"],
     available: false,
     borrowedBy: [4, 1, 2],
+    image: "https://images-na.ssl-images-amazon.com/images/I/81RCff1NpnL.jpg",
   },
   {
     id: 6,
@@ -52,6 +60,8 @@ const books = [
     genre: ["Fantasy"],
     available: true,
     borrowedBy: [],
+    image:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1353235205l/768889.jpg",
   },
   {
     id: 7,
@@ -61,6 +71,8 @@ const books = [
     genre: ["Fantasy"],
     available: false,
     borrowedBy: [4, 3, 2, 1, 5],
+    image:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1423848167l/22294935.jpg",
   },
   {
     id: 8,
@@ -70,6 +82,7 @@ const books = [
     genre: ["Crime", "Mystery"],
     available: false,
     borrowedBy: [3, 5],
+    image: "https://images-na.ssl-images-amazon.com/images/I/813H-43Z8-L.jpg",
   },
   {
     id: 9,
@@ -79,6 +92,8 @@ const books = [
     genre: ["Fiction"],
     available: false,
     borrowedBy: [5, 1],
+    image:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442161289l/6642715._SY475_.jpg",
   },
   {
     id: 10,
@@ -88,6 +103,8 @@ const books = [
     genre: ["Fantasy"],
     available: false,
     borrowedBy: [5],
+    image:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1491842507l/34076952.jpg",
   },
 ];
 

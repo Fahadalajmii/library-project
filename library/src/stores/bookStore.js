@@ -11,6 +11,7 @@ class BookStore {
   }
   addBook = (book) => {
     book.id = this.books[this.books.length - 1].id + 1;
+    book.available = true;
     this.books.push(book);
   };
   returnBook = (bookId) => {

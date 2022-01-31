@@ -33,34 +33,38 @@ const BooksList = () => {
 
   return (
     <div className="page">
-      <div className="input-group rounded">
-        <input
-          onChange={changeQuery}
-          type="search"
-          className="form-control rounded"
-          placeholder="Search"
-          aria-label="Search"
-          aria-describedby="search-addon"
-        />
+      <div className="search">
+        <div className="input-group rounded ">
+          <input
+            onChange={changeQuery}
+            type="search"
+            className="form-control rounded"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="search-addon"
+          />
+        </div>
       </div>
       <br />
-      Genre:
-      <select onChange={changeType} className="form-select">
-        <option value="" selected>
-          All
-        </option>
-        <option value="Self-Help">Self-Help</option>
-        <option value="Sci-Fi">Sci-Fi</option>
-        <option value="Thriller">Thriller</option>
-        <option value="Suspense">Suspense</option>
-        <option value="Fantasy">Fantasy</option>
-        <option value="Biography">Biography</option>
-        <option value="Business">Business</option>
-        <option value="Entrepreneurship">Entrepreneurship</option>
-        <option value="Crime">Crime</option>
-        <option value="Mystery">Mystery</option>
-        <option value="Fiction">Fiction</option>
-      </select>
+      <div className="search">
+        <select onChange={changeType} className="form-select">
+          <option value="" selected>
+            All
+          </option>
+          <option value="Self-Help">Self-Help</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Suspense">Suspense</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Biography">Biography</option>
+          <option value="Business">Business</option>
+          <option value="Entrepreneurship">Entrepreneurship</option>
+          <option value="Crime">Crime</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Fiction">Fiction</option>
+        </select>
+      </div>
+
       <div className="grid">{booksArray}</div>
       <Button variant="primary" onClick={handleShow}>
         Add new book

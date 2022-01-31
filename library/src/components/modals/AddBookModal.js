@@ -58,6 +58,14 @@ function AddBookModal({ show, handleClose }) {
                 <option value="Fiction">Fiction</option>
               </Form.Select>
             </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>book image</Form.Label>
+              <Form.Control
+                name="image"
+                onChange={handleChange}
+                placeholder="insert book image"
+              />
+            </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
